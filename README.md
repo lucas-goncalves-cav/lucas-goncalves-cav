@@ -16,7 +16,7 @@ Desenvolvo aplicações web, apps mobile, APIs, integrações e produtos de soft
 
 Sou desenvolvedor Full Stack com experiência na construção e evolução de sistemas de negócio, aplicações web, apps mobile, APIs e integrações entre plataformas.
 
-Gosto de trabalhar no produto como um todo: entender o problema, estruturar a solução, modelar dados, desenvolver backend e frontend, integrar serviços externos, preparar deploy e acompanhar a evolução da aplicação. Boa parte do que construo é multi-tenant desde o desenho — um sistema, vários clientes.
+Gosto de trabalhar no produto como um todo: entender o problema, estruturar a solução, modelar dados, desenvolver backend e frontend, integrar serviços externos, preparar deploy e acompanhar a evolução da aplicação. Boa parte do que construo é multi-tenant desde o desenho: um sistema, vários clientes.
 
 Minha experiência passa por **C#/.NET, Python, PHP, Angular, React, Flutter, SQL Server, PostgreSQL, MongoDB e Docker**, além de pipelines de IA aplicados a produto real (não só protótipo) e GitHub/Azure DevOps no fluxo de desenvolvimento.
 
@@ -78,8 +78,8 @@ Produtos               → solução completa, da ideia até a aplicação funci
 **Otimizador de desempenho para Windows voltado a jogos competitivos (CS2, Valorant, Apex, R6).**
 
 Produto autoral, do app à distribuição: aplicativo desktop (WPF/.NET) com medição própria de
-frametime via ETW (sem injetar em processo de jogo), motor de tweaks reversível — backup do valor
-original e ponto de restauração antes de qualquer alteração —, sistema de licenciamento próprio
+frametime via ETW (sem injetar em processo de jogo), motor de tweaks reversível, com backup do
+valor original e ponto de restauração antes de qualquer alteração, sistema de licenciamento próprio
 (HWID + criptografia compartilhada entre cliente e servidor) e servidor de ativação em ASP.NET
 Core. Inclui site de vendas e empacotamento com atualização delta.
 
@@ -105,9 +105,9 @@ Evolution API.
 **Plataforma de marketplace multi-plataforma, do catálogo ao checkout.**
 
 App mobile em Flutter, API assíncrona em FastAPI (Python) com MongoDB e autenticação por OTP,
-painel administrativo em Vue 3 + Vite e site institucional em Next.js — quatro frentes que integro
-em torno da mesma base de dados e das mesmas regras de negócio (catálogo, precificação, carrinho e
-cupons).
+painel administrativo em Vue 3 + Vite e site institucional em Next.js. São quatro frentes que
+integro em torno da mesma base de dados e das mesmas regras de negócio (catálogo, precificação,
+carrinho e cupons).
 
 **Stack:** Flutter • Python • FastAPI • MongoDB • Vue • Next.js • React
 
@@ -117,8 +117,8 @@ cupons).
 **Plataforma multi-tenant de automação de conteúdo com IA e SEO/GEO.**
 
 Worker .NET que coleta notícias de nicho, gera artigos por um pipeline de LLM em etapas (curadoria
-→ análise → redação → edição), aplica gates de qualidade **em código** — similaridade com a fonte,
-tamanho mínimo, frases banidas por marca — antes de liberar qualquer publicação automática, e serve
+→ análise → redação → edição), aplica gates de qualidade **em código** (similaridade com a fonte,
+tamanho mínimo, frases banidas por marca) antes de liberar qualquer publicação automática, e serve
 os blogs via Angular SSR com JSON-LD, cumprindo o contrato de GEO: conteúdo completo sem depender
 de JavaScript. Fila editorial com aprovação humana e custo de cada chamada de LLM logado no banco.
 
@@ -127,7 +127,7 @@ de JavaScript. Fila editorial com aprovação humana e custo de cada chamada de 
 ---
 
 ### Landing pages de conversão
-**HAAR by RUPP** (salão de beleza) e **Corte & Estilo** — páginas com foco em performance e
+**HAAR by RUPP** (salão de beleza) e **Corte & Estilo**, páginas com foco em performance e
 conversão: HTML/SCSS/JS vanilla, build com Parcel, otimização de imagem (WebP/WOFF2 gerados no
 build) e zero dependência de runtime em produção, publicadas em Cloudflare Pages/Vercel.
 
@@ -136,9 +136,9 @@ build) e zero dependência de runtime em produção, publicadas em Cloudflare Pa
 ---
 
 ### Ferramentas & automação
-**shopcar-importer** — scraper em Python que importa o estoque público de uma loja no portal
+**shopcar-importer**: scraper em Python que importa o estoque público de uma loja no portal
 ShopCar e gera uma planilha já no formato do sistema de gestão do cliente, com matching fuzzy de
-marca/modelo. **pytomd** — conversor local de PDF para Markdown (Streamlit + PyMuPDF), 100%
+marca/modelo. **pytomd**: conversor local de PDF para Markdown (Streamlit + PyMuPDF), 100%
 offline, sem depender de serviço externo.
 
 **Stack:** Python • BeautifulSoup • Pandas • Streamlit • PyMuPDF
