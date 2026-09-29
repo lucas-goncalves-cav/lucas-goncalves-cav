@@ -135,6 +135,17 @@ build) e zero dependência de runtime em produção, publicadas em Cloudflare Pa
 
 ---
 
+### EliteLeads
+**Dashboard interno de onboarding de clientes, do pagamento ao briefing.**
+
+Painel em Next.js que recebe o webhook de pagamento do Asaas, cadastra o cliente, dispara o email
+de boas vindas via Resend com o link do formulário e acompanha briefings e prompts gerados. O fluxo
+inteiro é automático: o cliente paga e o processo segue sem intervenção manual.
+
+**Stack:** Next.js • JavaScript • Asaas • Resend • Vercel
+
+---
+
 ### Ferramentas & automação
 **shopcar-importer**: scraper em Python que importa o estoque público de uma loja no portal
 ShopCar e gera uma planilha já no formato do sistema de gestão do cliente, com matching fuzzy de
@@ -142,6 +153,40 @@ marca/modelo. **pytomd**: conversor local de PDF para Markdown (Streamlit + PyMu
 offline, sem depender de serviço externo.
 
 **Stack:** Python • BeautifulSoup • Pandas • Streamlit • PyMuPDF
+
+---
+
+## Repositórios open source
+
+Dez projetos que escrevi do zero para deixar o código aberto. Cada um existe para mostrar uma
+decisão de engenharia inteira, não só que a tecnologia foi usada: todos têm README explicando o
+porquê das escolhas e CI no GitHub Actions que roda de verdade, e a maioria traz suíte de testes e
+Docker.
+
+### Backend e .NET
+
+| Repositório | O que demonstra | Stack |
+|---|---|---|
+| **[dotnet-saas-multitenant](https://github.com/lucas-goncalves-cav/dotnet-saas-multitenant)** | SaaS multi-tenant onde o isolamento é garantido pela camada de persistência: nenhuma query no projeto menciona `TenantId`. Global query filters mais uma guarda no `SaveChanges`, porque filtro não protege escrita. 50 testes, e o CI confere o SQL gerado contra SQL Server real. | .NET 9 • EF Core • SQL Server • JWT |
+| **[dotnet-clean-architecture-api](https://github.com/lucas-goncalves-cav/dotnet-clean-architecture-api)** | Clean Architecture aplicada de verdade: Result Pattern no lugar de exceção para fluxo esperado, validação com FluentValidation e dependências apontando para dentro. | .NET 9 • EF Core • Docker |
+| **[webhook-delivery-service](https://github.com/lucas-goncalves-cav/webhook-delivery-service)** | A infraestrutura por trás de webhooks estilo Stripe: assinatura HMAC, retry com backoff exponencial e jitter, dead letter queue e histórico de entrega. | .NET 9 • SQL Server • Docker |
+| **[asaas-integration-demo](https://github.com/lucas-goncalves-cav/asaas-integration-demo)** | Integração de pagamento construída para o gateway ser trocável: adapter por provedor, modelo de status interno, webhook idempotente e máquina de estados que aguenta evento fora de ordem. | .NET 9 • HttpClient resiliente |
+| **[design-patterns-dotnet](https://github.com/lucas-goncalves-cav/design-patterns-dotnet)** | Padrões GoF em cenários reais: cada um mostra primeiro o código que dói, depois o refactor, com teste provando que o comportamento é o mesmo. | C# • xUnit |
+
+### Frontend
+
+| Repositório | O que demonstra | Stack |
+|---|---|---|
+| **[angular-admin-starter](https://github.com/lucas-goncalves-cav/angular-admin-starter)** | Base de painel administrativo pronta para reuso: standalone components, signals, autenticação, guards de rota, dark mode e componentes reaproveitáveis. | Angular 19 • TypeScript • Tailwind |
+| **[react-dashboard](https://github.com/lucas-goncalves-cav/react-dashboard)** | Separação entre estado de servidor e estado de cliente, que é onde a maioria dos dashboards se perde: React Query para um, Zustand para o outro. Gráficos em SVG escritos à mão, sem biblioteca. | React 19 • TypeScript • Vitest |
+
+### Dados e infraestrutura
+
+| Repositório | O que demonstra | Stack |
+|---|---|---|
+| **[sql-server-recipes](https://github.com/lucas-goncalves-cav/sql-server-recipes)** | Referência prática de SQL Server com comparações de consulta ruim e boa, índices, CTEs e window functions. Os ganhos de performance no README foram medidos, não estimados. | T-SQL • SQL Server 2022 |
+| **[dev-infrastructure-docker](https://github.com/lucas-goncalves-cav/dev-infrastructure-docker)** | Ambiente de desenvolvimento inteiro em um comando: SQL Server, PostgreSQL, MongoDB, Redis, RabbitMQ, MinIO, Mailpit e Seq, com profiles, health checks e Makefile. | Docker Compose • Shell |
+| **[pdf-to-markdown](https://github.com/lucas-goncalves-cav/pdf-to-markdown)** | Conversor de PDF para Markdown que infere hierarquia de títulos pelo tamanho da fonte, recupera listas e tabelas e valida upload por magic bytes. | Python 3.13 • FastAPI • pdfplumber |
 
 ---
 
